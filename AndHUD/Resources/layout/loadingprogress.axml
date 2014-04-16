@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="230dp"
     android:orientation="vertical"
     android:clickable="true"
     android:background="@drawable/roundedbg"
@@ -10,14 +10,22 @@
         android:id="@+id/loadingProgressWheel"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center_horizontal|center_vertical" />
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
     <TextView
-        android:text="Loading..."
+        android:text="Loading so many things so I cannot be shown in ..."
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/textViewStatus"
         android:gravity="center_horizontal"
         android:textColor="@android:color/white"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@id/loadingProgressWheel"
+        android:layout_centerHorizontal="true"
+        android:maxLines="2"
+        android:lines="2"
+        android:ellipsize="marquee"
+        android:layout_marginTop="10dp" />
+</RelativeLayout>
