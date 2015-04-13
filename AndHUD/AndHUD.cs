@@ -223,8 +223,8 @@ namespace AndroidHUD
 				else
 				{
 					Application.SynchronizationContext.Send(state => {
-						progressWheel.SetProgress (progress);
-						statusText.Text = status ?? "";
+                        if(progressWheel != null) progressWheel.SetProgress (progress);
+						if(statusText != null) statusText.Text = status ?? "";
 					}, null);
 				}
 			}
